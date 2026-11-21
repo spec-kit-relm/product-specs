@@ -9,7 +9,7 @@ contract registry. It holds **no code and no implementation plans** (constitutio
 | Purpose | Command |
 |---------|---------|
 | Lint specs (same as CI) | `python ../speckit-platform/scripts/relm_sdd.py spec-lint --kind product` |
-| Constitution drift check | `python ../speckit-platform/scripts/relm_sdd.py constitution-check --governance ../speckit-platform/governance` |
+| Constitution drift check | `python ../speckit-platform/scripts/relm_sdd.py constitution-check --platform ../speckit-platform` |
 | Agent files check | `python ../speckit-platform/scripts/relm_sdd.py agent-files-check` |
 | Clone all sibling repos | `bash workspace/clone-all.sh` |
 
