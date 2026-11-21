@@ -34,7 +34,8 @@ uv tool install specify-cli --from git+https://github.com/github/spec-kit.git@v1
 ```
 
 ### 2. Open a Feature issue
-**Issues → New → Product feature.** The issue number `n` is the Feature ID **RELM-n**.
+**Issues → New → Product feature.** The issue number `n` is the Feature ID **RELM-n**. Open it
+*before* any pull request for the feature — issues and PRs share one number sequence.
 
 ### 3. Write the product spec (PO, QA spec partner)
 ```text
@@ -74,6 +75,7 @@ back here as PRs; follow-ups open new Feature issues that link to the original.
 
 | Artifact | State |
 |----------|-------|
+| Feature issue [#2](https://github.com/spec-kit-relm/product-specs/issues/2) | Gates 1–3 ticked, Gate 4 open |
 | [spec.md](specs/002-stock-reservation/spec.md) | **Approved** — 3 user stories, 9 scenario IDs, 4 success criteria |
 | [checklists/](specs/002-stock-reservation/checklists/) | requirements, api, ux, qa — ticked by QA; two items accepted by PO |
 | [impact.md](specs/002-stock-reservation/impact.md) | inventory-service → orders-service → web-storefront → e2e-tests, flag `checkout.stock-reservation` |
