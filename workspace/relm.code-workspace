@@ -1,0 +1,15 @@
+{
+  "folders": [
+    { "name": "📋 product-specs", "path": ".." },
+    { "name": "📦 inventory-service", "path": "../../inventory-service" },
+    { "name": "🧾 orders-service", "path": "../../orders-service" },
+    { "name": "🛍️ web-storefront", "path": "../../web-storefront" },
+    { "name": "✅ e2e-tests", "path": "../../e2e-tests" },
+    { "name": "🛠️ speckit-platform", "path": "../../speckit-platform" },
+    { "name": "📘 sdd-handbook", "path": "../../sdd-handbook" }
+  ],
+  "settings": {
+    "files.exclude": { "**/.specify/presets/.cache": true },
+    "search.exclude": { "**/node_modules": true, "**/target": true, "**/.next": true }
+  }
+}

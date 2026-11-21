@@ -1,0 +1,48 @@
+name: Product feature
+description: Start a new feature. This issue's number n becomes the Feature ID RELM-n in every repository.
+title: "<short title>"
+labels: ["feature", "lane:feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This issue number is the Feature ID.** Issue #n → `RELM-n` → `specs/NNN-<short-name>/` and
+        branch `NNN-<short-name>` in every participating repository.
+        Next step: `/speckit.specify RELM-n <short-name>: <problem statement>` in product-specs.
+  - type: input
+    id: short-name
+    attributes:
+      label: Short name (kebab-case, 2–4 words, reused in every repo)
+      placeholder: stock-reservation
+    validations: { required: true }
+  - type: dropdown
+    id: lane
+    attributes:
+      label: Lane
+      options:
+        - Cross-repo feature (full flow)
+        - Repository-local feature
+    validations: { required: true }
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem and desired outcome (no solutions, no technology)
+    validations: { required: true }
+  - type: textarea
+    id: users
+    attributes:
+      label: Who is affected and how will we measure success?
+  - type: input
+    id: repos
+    attributes:
+      label: Repositories you expect to change (tech lead confirms in impact.md)
+      placeholder: inventory-service, orders-service, web-storefront, e2e-tests
+  - type: checkboxes
+    id: gates
+    attributes:
+      label: Gates (tick as they pass — links in comments)
+      options:
+        - label: "Gate 1 — product spec approved (PO, QA, tech lead)"
+        - label: "Gate 2 — contracts locked (contracts.lock.md)"
+        - label: "Gate 3 — plans approved in every participating repo"
+        - label: "Gate 4 — release readiness signed off by QA"

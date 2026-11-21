@@ -1,0 +1,31 @@
+# Catalog of Relm repositories that take part in product features (PS-4).
+# Read by /speckit.relm.impact and humans; mirrored in relm.code-workspace and clone-all.sh.
+org: spec-kit-relm
+repositories:
+  - name: product-specs
+    team: architecture
+    kind: product
+    owns: []
+  - name: inventory-service
+    team: backend
+    kind: backend
+    stack: Go 1.23
+    owns: [inventory-api, inventory-events]
+  - name: orders-service
+    team: backend
+    kind: backend
+    stack: Java 21 / Spring Boot 3.4
+    owns: [orders-api]
+  - name: web-storefront
+    team: frontend
+    kind: frontend
+    stack: Next.js 15 / TypeScript
+    owns: []
+  - name: e2e-tests
+    team: qa
+    kind: qa
+    stack: Playwright / TypeScript
+    owns: []
+tooling:
+  - speckit-platform
+  - sdd-handbook

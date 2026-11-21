@@ -1,0 +1,7 @@
+*                              @spec-kit-relm/architecture
+/specs/                        @spec-kit-relm/architecture @spec-kit-relm/qa
+/specs/*/checklists/           @spec-kit-relm/qa
+/specs/*/contracts.lock.md     @spec-kit-relm/architecture @spec-kit-relm/backend @spec-kit-relm/frontend
+/contracts/                    @spec-kit-relm/architecture
+/.specify/memory/              @spec-kit-relm/architecture @spec-kit-relm/sdd-guild
+/AGENTS.md                     @spec-kit-relm/architecture @spec-kit-relm/sdd-guild
