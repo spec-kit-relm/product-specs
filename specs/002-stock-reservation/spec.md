@@ -1,12 +1,12 @@
 # Feature Specification: Stock reservation at checkout
 
-**Feature Branch**: `001-stock-reservation`
+**Feature Branch**: `002-stock-reservation`
 
 **Created**: 2026-11-16
 
 **Status**: Approved
 
-**Input**: User description: "RELM-1 stock-reservation: Shoppers sometimes pay for items that sold out while they were checking out. When checkout starts, hold the items for a limited time so they cannot be sold to someone else, show the shopper how long the hold lasts, and release holds that are not used."
+**Input**: User description: "RELM-2 stock-reservation: Shoppers sometimes pay for items that sold out while they were checking out. When checkout starts, hold the items for a limited time so they cannot be sold to someone else, show the shopper how long the hold lasts, and release holds that are not used."
 
 ## Clarifications
 
@@ -125,7 +125,7 @@ units are available again within 60 seconds.
 
 ## Relm Traceability *(mandatory — ORG-1, PRD-1, QA-2)*
 
-**Feature ID**: RELM-1
+**Feature ID**: RELM-2
 **Central spec**: this file (product-level spec)
 **Repository role**: product
 **Contracts provided**: none (see `impact.md` for interface owners)
@@ -135,17 +135,17 @@ units are available again within 60 seconds.
 **Status lifecycle**: Draft → In Review → Approved → Implemented → Released
 
 ### Scenario IDs
-Scenarios are referenced as `RELM-1/US<k>/AS<m>`, e.g. `RELM-1/US2/AS2` = "submitted twice →
+Scenarios are referenced as `RELM-2/US<k>/AS<m>`, e.g. `RELM-2/US2/AS2` = "submitted twice →
 exactly one order". Every automated test that verifies a scenario starts its title with this ID.
 
 | Scenario ID | Short name | Priority | Verified in |
 |-------------|-----------|----------|-------------|
-| RELM-1/US1/AS1 | hold on checkout start | P1 | inventory-service (provider), web-storefront (UI), e2e-tests |
-| RELM-1/US1/AS2 | partial availability → no hold | P1 | inventory-service, web-storefront, e2e-tests |
-| RELM-1/US1/AS3 | reload shows same hold | P1 | inventory-service, web-storefront, e2e-tests |
-| RELM-1/US1/AS4 | held units unavailable to others | P1 | inventory-service, e2e-tests |
-| RELM-1/US2/AS1 | order converts hold | P1 | orders-service, inventory-service, e2e-tests |
-| RELM-1/US2/AS2 | double submit → one order | P1 | orders-service, web-storefront, e2e-tests |
-| RELM-1/US2/AS3 | expired hold rejected | P1 | orders-service, web-storefront, e2e-tests |
-| RELM-1/US3/AS1 | expiry releases units ≤ 60 s | P2 | inventory-service, e2e-tests (API level) |
-| RELM-1/US3/AS2 | expired state on return | P2 | web-storefront, e2e-tests |
+| RELM-2/US1/AS1 | hold on checkout start | P1 | inventory-service (provider), web-storefront (UI), e2e-tests |
+| RELM-2/US1/AS2 | partial availability → no hold | P1 | inventory-service, web-storefront, e2e-tests |
+| RELM-2/US1/AS3 | reload shows same hold | P1 | inventory-service, web-storefront, e2e-tests |
+| RELM-2/US1/AS4 | held units unavailable to others | P1 | inventory-service, e2e-tests |
+| RELM-2/US2/AS1 | order converts hold | P1 | orders-service, inventory-service, e2e-tests |
+| RELM-2/US2/AS2 | double submit → one order | P1 | orders-service, web-storefront, e2e-tests |
+| RELM-2/US2/AS3 | expired hold rejected | P1 | orders-service, web-storefront, e2e-tests |
+| RELM-2/US3/AS1 | expiry releases units ≤ 60 s | P2 | inventory-service, e2e-tests (API level) |
+| RELM-2/US3/AS2 | expired state on return | P2 | web-storefront, e2e-tests |

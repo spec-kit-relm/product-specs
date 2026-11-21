@@ -6,9 +6,9 @@ for a feature (PRD-4).
 
 | Contract | Kind | Provider (owner) | File | Current version | Consumers (pinned version) | Last changed by |
 |----------|------|------------------|------|-----------------|----------------------------|-----------------|
-| inventory-api | OpenAPI 3.1 | inventory-service | [`contracts/inventory-api.yaml`](https://github.com/spec-kit-relm/inventory-service/blob/main/contracts/inventory-api.yaml) | 1.1.0 | orders-service (1.1.0), web-storefront (1.1.0), e2e-tests (1.1.0) | RELM-1 |
-| inventory-events | AsyncAPI 3 | inventory-service | [`contracts/inventory-events.yaml`](https://github.com/spec-kit-relm/inventory-service/blob/main/contracts/inventory-events.yaml) | 1.1.0 | — | RELM-1 |
-| orders-api | OpenAPI 3.1 | orders-service | [`contracts/orders-api.yaml`](https://github.com/spec-kit-relm/orders-service/blob/main/contracts/orders-api.yaml) | 1.3.0 | web-storefront (1.3.0), e2e-tests (1.3.0) | RELM-1 |
+| inventory-api | OpenAPI 3.1 | inventory-service | [`contracts/inventory-api.yaml`](https://github.com/spec-kit-relm/inventory-service/blob/main/contracts/inventory-api.yaml) | 1.1.1 | orders-service (1.1.1), web-storefront (1.1.1), e2e-tests (1.1.1) | RELM-2 |
+| inventory-events | AsyncAPI 3 | inventory-service | [`contracts/inventory-events.yaml`](https://github.com/spec-kit-relm/inventory-service/blob/main/contracts/inventory-events.yaml) | 1.1.1 | — | RELM-2 |
+| orders-api | OpenAPI 3.1 | orders-service | [`contracts/orders-api.yaml`](https://github.com/spec-kit-relm/orders-service/blob/main/contracts/orders-api.yaml) | 1.3.1 | web-storefront (1.3.1), e2e-tests (1.3.1) | RELM-2 |
 
 ## Rules
 

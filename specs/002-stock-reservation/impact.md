@@ -1,6 +1,6 @@
 # Impact Map: Stock reservation at checkout
 
-**Feature ID**: RELM-1 | **Product spec**: [spec.md](./spec.md) | **Owner**: tech lead (`@spec-kit-relm/architecture`)
+**Feature ID**: RELM-2 | **Product spec**: [spec.md](./spec.md) | **Owner**: tech lead (`@spec-kit-relm/architecture`)
 
 ## Participating repositories
 
@@ -18,16 +18,16 @@ reviews all `tasks.md` for scenario coverage.
 
 | Interface | Provider (owner) | Consumers | Change | Contract file | Target version |
 |-----------|------------------|-----------|--------|---------------|----------------|
-| Inventory API — reservations (`POST /reservations`, `GET /reservations/{id}`, `POST /reservations/{id}/commit`) | inventory-service | orders-service, web-storefront, e2e-tests | additive | `inventory-service/contracts/inventory-api.yaml` | 1.1.0 |
-| Inventory events — `inventory.reservation.expired`, `inventory.reservation.committed` | inventory-service | (analytics; no Relm service consumes them in RELM-1) | additive | `inventory-service/contracts/inventory-events.yaml` | 1.1.0 |
-| Orders API — `POST /orders` accepts `reservationId`; new problem type `reservation-expired` | orders-service | web-storefront, e2e-tests | additive | `orders-service/contracts/orders-api.yaml` | 1.3.0 |
+| Inventory API — reservations (`POST /reservations`, `GET /reservations/{id}`, `POST /reservations/{id}/commit`) | inventory-service | orders-service, web-storefront, e2e-tests | additive | `inventory-service/contracts/inventory-api.yaml` | 1.1.1 |
+| Inventory events — `inventory.reservation.expired`, `inventory.reservation.committed` | inventory-service | (analytics; no Relm service consumes them in RELM-2) | additive | `inventory-service/contracts/inventory-events.yaml` | 1.1.1 |
+| Orders API — `POST /orders` accepts `reservationId`; new problem type `reservation-expired` | orders-service | web-storefront, e2e-tests | additive | `orders-service/contracts/orders-api.yaml` | 1.3.1 |
 
 ## Rollout order (ORG-7)
 
 1. **inventory-service** — deploy reservation endpoints + expiry worker. Additive, unused until step 3.
 2. **orders-service** — deploy `reservationId` support (optional field; orders without it behave as today).
 3. **web-storefront** — deploy with flag `checkout.stock-reservation` **off**.
-4. **e2e-tests** — `@smoke` + `@relm-1` green in staging with the flag on for test carts.
+4. **e2e-tests** — `@smoke` + `@relm-2` green in staging with the flag on for test carts.
 5. Enable `checkout.stock-reservation` for 5 % → 50 % → 100 % of carts, watching SC-002 and SC-004 dashboards for 24 h at each step.
 
 ## Rollback order

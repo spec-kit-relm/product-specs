@@ -70,20 +70,20 @@ contract PRs; when they merge, the tech lead locks versions here (**Gate 2**: `c
 After release, this spec describes current behavior (living spec, PRD-6). Changes in behavior come
 back here as PRs; follow-ups open new Feature issues that link to the original.
 
-## Worked example: RELM-1 — Stock reservation at checkout
+## Worked example: RELM-2 — Stock reservation at checkout
 
 | Artifact | State |
 |----------|-------|
-| [spec.md](specs/001-stock-reservation/spec.md) | **Approved** — 3 user stories, 9 scenario IDs, 4 success criteria |
-| [checklists/](specs/001-stock-reservation/checklists/) | requirements, api, ux, qa — ticked by QA; two items accepted by PO |
-| [impact.md](specs/001-stock-reservation/impact.md) | inventory-service → orders-service → web-storefront → e2e-tests, flag `checkout.stock-reservation` |
-| [contracts.lock.md](specs/001-stock-reservation/contracts.lock.md) | inventory-api 1.1.0, inventory-events 1.1.0, orders-api 1.3.0 — **locked** |
+| [spec.md](specs/002-stock-reservation/spec.md) | **Approved** — 3 user stories, 9 scenario IDs, 4 success criteria |
+| [checklists/](specs/002-stock-reservation/checklists/) | requirements, api, ux, qa — ticked by QA; two items accepted by PO |
+| [impact.md](specs/002-stock-reservation/impact.md) | inventory-service → orders-service → web-storefront → e2e-tests, flag `checkout.stock-reservation` |
+| [contracts.lock.md](specs/002-stock-reservation/contracts.lock.md) | inventory-api 1.1.1, inventory-events 1.1.1, orders-api 1.3.1 — **locked** |
 
 Follow the same feature into
-[inventory-service](https://github.com/spec-kit-relm/inventory-service/tree/main/specs/001-stock-reservation),
-[orders-service](https://github.com/spec-kit-relm/orders-service/tree/main/specs/001-stock-reservation),
-[web-storefront](https://github.com/spec-kit-relm/web-storefront/tree/main/specs/001-stock-reservation) and
-[e2e-tests](https://github.com/spec-kit-relm/e2e-tests/tree/main/specs/001-stock-reservation) — each
+[inventory-service](https://github.com/spec-kit-relm/inventory-service/tree/main/specs/002-stock-reservation),
+[orders-service](https://github.com/spec-kit-relm/orders-service/tree/main/specs/002-stock-reservation),
+[web-storefront](https://github.com/spec-kit-relm/web-storefront/tree/main/specs/002-stock-reservation) and
+[e2e-tests](https://github.com/spec-kit-relm/e2e-tests/tree/main/specs/002-stock-reservation) — each
 stopped right before `/speckit.implement`, so you can run it yourself. The full walkthrough is the
 [cross-repo playbook](https://github.com/spec-kit-relm/sdd-handbook/blob/main/playbooks/cross-repo-feature.md).
 
