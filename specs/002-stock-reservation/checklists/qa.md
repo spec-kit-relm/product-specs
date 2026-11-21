@@ -3,7 +3,7 @@
 **Purpose**: Are the scenarios testable and traceable? (QA-1, QA-2, QA-3)
 **Created**: 2026-11-17 · **Feature**: [spec.md](../spec.md)
 
-- [x] CHK001 Does every acceptance scenario have a stable ID (`RELM-1/US<k>/AS<m>`)? [Spec §Relm Traceability]
+- [x] CHK001 Does every acceptance scenario have a stable ID (`RELM-2/US<k>/AS<m>`)? [Spec §Relm Traceability]
 - [x] CHK002 Is every P1 scenario independently testable with synthetic data? [Spec §User Stories]
 - [x] CHK003 Is the 15-minute expiry testable without waiting 15 minutes (configurable TTL in test environments)? [Spec §FR-002 → inventory-service plan]
 - [x] CHK004 Is the 60-second release requirement measurable in staging? [Spec §SC-003]
